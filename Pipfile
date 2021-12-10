@@ -11,6 +11,8 @@ djangorestframework = "*"
 django-crispy-forms = "*"
 pytz = "*"
 django-registration = "*"
+gunicorn = "*"
+django-heroku = "*"
 
 [dev-packages]
 
