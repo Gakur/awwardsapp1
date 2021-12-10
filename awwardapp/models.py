@@ -35,3 +35,9 @@ class Projects(models.Model):
         searched=cls.objects.filter(name__icontains=word)
         return searched
 
+class Comments(models.Model):
+    user=models.ForeignKey(User,on_delete=models.CASCADE)
+    comment=models.TextField(max_length=200)
+    pro_id=models.IntegerField(default=0)
+
+
