@@ -29,27 +29,27 @@
         <img height="120" class="rounded-circle hoverable " src="" alt="">
         <span id="user">{{user}}</span>
         <br><br><br>
-        <i class="alert alert-warning">Please update your profile to get started</i>
+        <i class="alert alert-warning">For better experience, kindly update your profile</i>
           </div>
       </div>
       {%endif%}
       <p>{{user.email}}</p>
 
-      <p>Developer</p>
+      <p>Software Developer</p>
       <a class="btn btn-outline-danger" href="/logout/">Logout</a>
 
 
     </div>
     <div class="col-md-7">
-      <h1>Developer Guide</h1>
+      <h1>API Endpoints</h1>
       <hr>
       <div class="row">
         <div class="col-md-6">
           <div class="jumbotron">
-            <p>Hello We are excited to release a new feature in our application, The API We are so glad to allow developers use Our data to Make amazing applications</p>
+            <p>This endpoint returns all the user profiles with information such as the username, bio, projects of the user and profile picture</p>
             <br>
-            <b>Are you excited ?</b>
-            <p>Users end-point <a href="/api/profile/">View</a></p>
+            <b>Its really Awesome</b>
+            <p>Profile End-point <a href="/api/profile/">View</a></p>
             <br>
 
           </div>
@@ -58,9 +58,11 @@
         </div>
         <div class="col-md-6">
           <div class="jumbotron">
-          <p>This API has two main End Points The users end point where you can view all users in this application and their amazing profiles</p>
-          <p>The second End-Point is the Projects Available in this application</p>
+          <p>This endpoint returns all information pertaining to all the projects posted in this application by authenticated users only.</p>
+          <br>
+          <b>Navigate to Enjoy</b>
           <p>Projects End-point <a href="/api/projects/">View</a></p>
+          <br>
 
           </div>
 
