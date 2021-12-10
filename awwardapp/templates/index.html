@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{% load crispy_forms_tags %}
+{{block.super}}
+{%block content%}
+
+<div class="container-fluid">
+  <div class="row">
+    {%for project in projects%}
+    <div class="col-md-4">
+      <div class="card content">
+        <div class="image">
+            <a class="img" href="/project/{{project.id}}">  <img class="img-fluid" src="{{project.image.url}}" alt=""></a>
+        </div>
+        <div class="check">
+          <i class="dta">{{project.date}}</i>
+          <p>{{project.name}}</p>
+
+          <hr>
+          <div class="">
+            <!-- <i class="fas fa-pastafarianism"></i> -->
+            <p>Submitted By {{project.user}}</p>
+          </div>
+          <div class="">
+            <p>Visit the project at <em style="color: purple;">{{project.link}}</em></p>
+          </div>
+        </div>
+
+      </div>
+      <br>
+    </div>
+
+    {%endfor%}
+
+  </div>
+
+</div>
+
+{%endblock%}
