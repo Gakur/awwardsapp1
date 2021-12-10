@@ -134,3 +134,15 @@ def project_detail(request,project_id):
     except Exception as e:
         raise Http404()
     return render(request,'details.html',{'projects':projects,'form':form,'usability':average_usa,'design':average_des,'content':average_con,'average':averageRating,'auth':auth,'all':all,'ave':ave,'review':review,'comments':user_comment})
+
+
+def search(request):
+
+    if 'name' in request.GET and   request.GET['name']:
+        term=request.GET.get('name')
+        results=Projects.search_project(term)
+
+        return render(request,'search.html',{'projects':results})
+    else:
+        message="You havent searched any project"
+        return render(request,'search.html',{'message':message})
